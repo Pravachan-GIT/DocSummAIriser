@@ -1,5 +1,9 @@
-from app.services.confluence_connector import get_all_pages
+import sys
 import os
+sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+
+from app.services.confluence_connector import get_all_pages
+import test_embeddings
 from dotenv import load_dotenv
 
 load_dotenv()
