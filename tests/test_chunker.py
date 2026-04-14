@@ -13,7 +13,7 @@ def test_clean_html():
     print("clean_html passed")
 
 def test_chunk_text():
-    text = "This is a test sentence. " * 50  # simulate a long page
+    text = "This is a test sentence. " * 500  # simulate a long page
     chunks = chunk_text(
         text=text,
         page_id="PAGE-001",
