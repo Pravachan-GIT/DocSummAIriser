@@ -15,3 +15,10 @@ def generate_embeddings(chunks: list[dict]) -> list[dict]:
         chunk["embedding"] = response.data[i].embedding
 
     return chunks
+
+def embed_query(question: str) -> list[float]:
+    response = client.embeddings.create(
+        input=[question],
+        model="text-embedding-3-small"
+    )
+    return response.data[0].embedding
